@@ -1,0 +1,12 @@
+
+
+.planet-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espacio entre las tarjetas */
+}
+
+.planet-card {
+    flex: 1 1 calc(33.333% - 1rem); /* Tres tarjetas por fila con espacio */
+    max-width: calc(33.333% - 1rem);
+}

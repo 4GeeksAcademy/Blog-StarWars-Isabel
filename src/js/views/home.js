@@ -1,15 +1,19 @@
-import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
-import "../../styles/home.css";
+import React from 'react';
+import { Character } from '../component/Character.jsx';
+import { Planets } from '../component/Planets.jsx';
+import { Vehicles } from '../component/Vehicles.jsx';
 
-export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
+export const Home = ({ onFavoriteToggle, favorites }) => (
+    <div className="text-center mt-5">
+        <div className="mt-4">
+            <Character onFavoriteToggle={onFavoriteToggle} favorites={favorites} />
+        </div>
+        <div className="mt-5">
+            <Planets />
+        </div>
+        <div className="mt-5">
+            <Vehicles />
+        </div>
+        
+    </div>
 );
